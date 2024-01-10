@@ -22,16 +22,12 @@ print(seperated_nums)
 avg_three_nums = sum(seperated_nums)/len(seperated_nums)
 print(avg_three_nums)
 
-def avg_three(three_num):
-    for value in three_num:
-        numbers.append(value)
-        avg(numbers)
+def avg_three(n1,n2,n3):
+    average = (n1+n2+n3)/3
+    return average
+print(avg_three(1,3,5))
 
-#using a function to calculate the avg
-def avg_func(*n):
-    return sum(n)/len(n)
 
-print(avg_func(2,4))
 
 #2. Area of square and cube
 def square_calc(x):
