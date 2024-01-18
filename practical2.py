@@ -41,3 +41,28 @@ with open('C:\\Users\\44785\\Documents\\Bioinformatics\\biocomputing\\week1\\num
         total_lines += 1
     print(total_lines)
 
+#PRACTICAL 2 MISSED QUESTIONS:
+# Biocomputing, practical 2, question A3
+# Print out average of numbers in a file
+
+running_total = 0
+counter = 0
+with open('C:\\Users\\44785\\Documents\\Bioinformatics\\biocomputing\\week1\\numbers.txt', 'r') as f:
+    for line in f:
+        counter += 1
+        running_total += float(line)
+    avg = running_total/counter
+    print('Average:',  avg)
+
+#write out the min and max numbers in a file
+
+with open('C:\\Users\\44785\\Documents\\Bioinformatics\\biocomputing\\week1\\numbers.txt', 'r') as f:
+    i = 0
+    min = 0
+    max = 0
+    for line[i] in f:
+        if line[i] > line[i+1]:
+            max == line[i]
+        i +=1
+
+
