@@ -30,24 +30,15 @@ def motif_finder(filename,motif):
 # print(motif_finder("C:\\Users\\44785\\Documents\\Bioinformatics\\biocomputing\\week3\\Files for session 6-20240126\\seq_long.txt", 'GG'))
 
 # Q3 This code should read an alignment from a file, then output the last 10 characters in the alignment
-# from Bio.Seq import Seq
 
-#
-# def last_ten_alignment(filename):
-#     x = AlignIO.read('filename', 'clustal')
-#     with open(filename, 'r') as f:
-#         lines = f.readlines()
-#         print(lines)
-from Bio import Phylo
+from Bio.Seq import Seq
 from Bio import AlignIO
-try:
-    with open("C:\\Users\\44785\\Documents\\Bioinformatics\\biocomputing\\week3\\Files for session 6-20240126\\hAPP.phylip", 'r') as file:
-        alignments = AlignIO.parse(file, 'phylip')
-        for alignment in alignments:
-            print(alignment)
 
-except Exception as e:
-    print(f"An error occurred: {e}")
+# filename = "C:\\Users\\44785\\Documents\\Bioinformatics\\biocomputing\\week3\\Files for session 6-20240126\\hAPP.phylip"
+# alignment = AlignIO.read(filename, 'phylip')
+# print(alignment)
 
-
-# last_ten_alignment("C:\\Users\\44785\\Documents\\Bioinformatics\\biocomputing\\week3\\Files for session 6-20240126\\hAPP.phylip")
+def last_ten_alignment(file):
+    alignment = AlignIO.read(file, 'clustal')
+    return alignment[:,-10:]
+print(last_ten_alignment("C:\\Users\\44785\\Documents\\Bioinformatics\\biocomputing\\week3\\Files for session 5-20240122\\hAPP.clustal"))
